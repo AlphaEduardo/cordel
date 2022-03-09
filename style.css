@@ -1,27 +1,44 @@
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
 * {
     margin: 0px;
     padding: 0px;
     font-size: 1em;
 }
 
+:root {
+    --fonte1:Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2:'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte3);
+}
+
 header {
     background-color: black;
     margin: 0px 0px 0px 0px;
-    padding: 50px;
 }
 
 header > h1 {
     color:white ;
     text-align: center;
     margin: 0px;
+    font-variant: small-caps;
+    padding: 50px 0px 0px 00px;
+    font-family: var(--fonte2);
+    font-size: 10vh;
 }
 
 header > h3 {
     color: white;
     text-align: center;
-    margin: 0px;
+    margin: 0px;    
+    padding: 0px 0px 50px 0px ;
 }
 
 header > h3 > a {
@@ -34,10 +51,49 @@ header > h3 > a:hover {
     text-decoration: underline;
 }
 
-p#foto {
+section > p{
+    font-size: 2em;
+    line-height: 2em;
+}
+
+section.normal {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 3.5vh;
+}
+
+section.normal{
+    color: black;
+    background-color: white;
+}
+
+section.foto {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
     color: white;
     background-color: rgba(0, 0, 0, 0.514);
     text-shadow: 1px 1px 0px black;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.37);
+    background-attachment: fixed;
+}
+
+section.foto > p{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+section#img1 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+    background-size: cover;
+}
+
+section#img2 {
+    background-image: url(imagens/background002.jpg);
+    background-size: cover;
 }
 
 footer {
@@ -47,7 +103,7 @@ footer {
 footer > p {
     text-align: center;
     color: white;
-    
+    padding: 10px;
 }
 
 footer > p > a {
